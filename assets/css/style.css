@@ -1,0 +1,243 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+*{
+  --russian-violet: hsl(269, 36%, 22%);
+  --dark-purple: hsl(268, 22%, 15%);
+  --eerie-black: hsl(240, 4%, 10%);
+  --davys-gray: hsl(0, 0%, 34%);
+  --light-gray: hsl(0, 0%, 84%);
+  --cultured-1: hsl(0, 0%, 98%);
+  --cultured-2: hsl(280, 14%, 96%);
+  --cultured-3: hsl(280, 9%, 94%);
+  --gainsboro: hsl(0, 1%, 85%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --pumpkin: hsl(22, 90%, 56%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+
+  --fs-1: 3rem;
+  --fs-2: 2rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.4rem;
+  --fs-5: 1.3rem;
+
+  --fw-900: 900;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+
+  --section-padding: 50px;
+
+  --shadow-1: 0px 0px 20px var(--black_10);
+  --shadow-2: 0 0 20px 4px var(--black_5);
+
+  --radius-6: 6px;
+  --radius-10: 10px;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+  
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  --innerColor: var(--white);
+  --themeColor: var(--black);
+  --bgColor: var(--black);
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+main {
+  width: 100%;
+  height: 100vh;
+}
+/* HEADER */
+header{
+  min-width: 100%;
+  display: flex;
+}
+nav{
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+  padding-block: 8px;
+}
+nav #logo img{
+  width: 70px;
+  cursor: pointer;
+}
+nav #menu_icon img{
+  width: 30px;
+  display: none;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+}
+nav ul li{
+  cursor: pointer;
+  margin-right: 30px;
+  transition: .3s ease-in-out;
+  color: var(--themeColor);
+}
+nav ul li:hover{
+  color: rgb(255, 38, 38);
+}
+
+/* MODE TOGGLE */
+nav ul li img{
+  width: 30px;
+}
+/* ********************************* */
+
+/* HERO SECTION */
+
+#hero_section{
+  display: flex;
+}
+
+/* LEFT SIDE */
+#hero_section #left_side{
+  flex-basis: 50%;
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-block: 100px 0;
+}
+#hero_section #left_side #about_me{
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  gap: 15px;
+  color:var(--themeColor)
+}
+#hero_section #left_side #about_me h1{
+  font-size: 5rem;
+}
+#hero_section #left_side #about_me h1 span{
+  color: rgb(255, 38, 38);
+}
+#about_me button{
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: .3s ease;
+  background: var(--themeColor);
+  color: var(--innerColor)
+}
+#about_me button:hover{
+  background: rgb(255, 38, 38);
+  color: wheat;
+}
+#hero_section #left_side #icons{
+  margin-top: 90px;
+}
+#hero_section #left_side #icons img{
+  height: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  background: var(--bgColor);
+  padding: 5px;
+  border-radius: 10px;
+}
+/* ---------------- */
+
+/* RIGHT SIDE */
+
+#hero_section #right_side{
+  flex-basis: 50%;
+}
+#hero_section #right_side #bg{
+  width: 40%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+#hero_section #right_side #bg img{
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: bottom 1s, left 1s;
+}
+#hero_section #right_side #bg #main_img:hover{
+  left: 54%;
+}
+#hero_section #right_side #bg #bg_img:hover{
+  bottom: 40px
+}
+/* ---------------- */
+
+
+
+
+
+
+

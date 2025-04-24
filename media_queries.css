@@ -1,0 +1,70 @@
+@media only screen and (max-width: 768px) {
+    /* header */
+    html{
+        font-size: 8px;
+    }
+    nav ul ul#links{
+        width: 100%;
+        background: linear-gradient(to right bottom,#fb291a, rgb(155, 3, 3));
+        position: absolute;
+        top: 75px;
+        right: 0px;
+        z-index: 2;
+        margin-inline: 0px;
+        flex-direction: column;
+    }
+    nav ul ul#links.toggle{
+        display: none;
+      }
+    nav ul ul#links li{
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        transition: .5s ease;
+    }
+    nav ul ul#links li:hover{
+        background: black;
+        color: white;
+    }
+    nav #menu_icon img{
+        display: block;
+    }
+    /* ------------------ */
+
+    /* hero section */
+    #hero_section{
+        flex-direction: column-reverse;
+    }
+    #hero_section #left_side{
+        flex-basis: 100%;
+    }
+    #hero_section #right_side{
+        flex-basis: 100%;
+    }
+    #hero_section #right_side #bg{
+        width: 40%;
+        height: 80%;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #hero_section #right_side #bg img{
+        height: 80%;
+      }
+      #hero_section #left_side #about_me{
+        position: absolute;
+        top: 100%;
+        transform: translateY(-50%);
+      }
+      #hero_section #left_side #icons{
+        position: absolute;
+        top: 110%;
+        transform: translateY(-50%);
+      }
+}
+@media only screen and (max-width: 320px){
+    #hero_section #right_side #bg img{
+        height: 70%;
+      }
+}
